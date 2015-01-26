@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/tasks.js"></script>
+    <!--script src="js/controllers.js"></script>
+    <script src="js/services.js"></script-->
+</head>
+
+<body ng-app="tasks" class="tasks">
+
+<div ng-controller="TasksCtrl">
+    <ion-header-bar class="bar-positive">
+        <button class="button button-icon icon ion-arrow-left-c"></button>
+        <h1 class="title">Task List</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list" ng-repeat="item in items">
+            <div class="list card">
+                <div class="item title">
+                    <span class="volume">{{info.volume}}</span>
+                    <span class="count">{{info.count}}</span>
+                </div>
+
+                <a href="#" class="item content">
+                    <p><span>账务年月</span><span class="year-month">{{info.year_month}}</span></p>
+                    <p><span>抄表周期</span><span class="period">{{info.period}}</span></p>
+
+                    <button class="button button-balanced button-operation">
+                        开始抄表
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!--div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Loading Duration (ms)</span>
+                <input type="number" ng-model="loadingOptions.duration">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Loading Delay (ms)</span>
+                <input type="number" ng-model="loadingOptions.delay">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Loading Template</span>
+                <textarea rows="3" ng-model="loadingOptions.template"></textarea>
+            </label>
+            <ion-toggle class="item item-toggle"
+                        ng-model="loadingOptions.noBackdrop">
+                Hide Backdrop?
+            </ion-toggle>
+        </div-->
+    </ion-content>
+</div>
+
+
+</body>
+</html>
