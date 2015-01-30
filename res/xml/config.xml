@@ -12,6 +12,9 @@
     <feature name="CordovaSQLite">
         <param name="android-package" value="net.orworks.cordovaplugins.cordovasqlite.CordovaSQLite" />
     </feature>
+    <feature name="file">
+        <param name="android-package" value="org.apache.cordova.file" />
+    </feature>
     <name>MeterReading</name>
     <description>
         An Ionic Framework and Cordova project.
@@ -20,10 +23,11 @@
         Ionic Framework Team
     </author>
     <!--content src="index.html" /-->
-    <content src="file:///mnt/sdcard/sh3h/meterreading/www/index.html" />
+    <content src="file:///mnt/sdcard/sh3h/meterreading/www/splash.html" />
     <access origin="*" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="BackupWebStorage" value="none" />
+    <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />
 </widget>
