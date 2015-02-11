@@ -1,8 +1,7 @@
-(function() {
-var isOpened = false;
-
 angular.module('login', ['ionic'])
 .controller('LoginCtrl', function($scope) {
+    var isOpened = false;
+
     $scope.user = {
         name: "",
         password: ""
@@ -25,9 +24,6 @@ angular.module('login', ['ionic'])
         else {
             alert("db is not opened!!!");
         }
-
-
-
 
         //alert("1234");
         /*if (window.loginModel.onLogin($scope.user.name, $scope.user.password)) {
@@ -58,11 +54,8 @@ angular.module('login', ['ionic'])
         });*/
         //mydb.checkUser($scope.user.name, $scope.user.password);
     };
-});
 
     function onDeviceReady() {
-        //onDestroy();
-
         window.cordovaSQLite.openDatabase("file:///mnt/sdcard/sh3h/meterreading/data/main.db", 0,
             function() {
                 isOpened = true;
@@ -72,13 +65,5 @@ angular.module('login', ['ionic'])
             });
     }
 
-    function onDestroy() {
-    //    if (isOpened) {
-    //        isOpened = false;
-    //        window.cordovaSQLite.closeDB();
-    //    }
-    }
-
     document.addEventListener("deviceready", onDeviceReady, false);
-    document.addEventListener("deviceready", onDestroy, false);
-})();
+});

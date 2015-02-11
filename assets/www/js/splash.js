@@ -1,6 +1,6 @@
 angular.module('splash', ['ionic'])
 .controller('SplashCtrl', function($scope) {
-    function writeToFile() {
+    /*function writeToFile() {
         window.requestFileSystem(window.LocalFileSystem.PERSISTENT, 0, gotFSForWrite, fail);
     }
 
@@ -24,11 +24,16 @@ angular.module('splash', ['ionic'])
 
     function fail(error) {
         alert(error.code);
-    }
+    }*/
 
-    $scope.click = function() {
-        writeToFile();
-    };
+    /*$scope.click = function() {
+        myfile.createDirectory(myfile.folderConfig);
+        myfile.createDirectory(myfile.folderUser);
+        myfile.createDirectory(myfile.folderData);
+        myfile.createDirectory(myfile.folderImages);
+        myfile.createDirectory(myfile.folderConfig);
+        myfile.createDirectory(myfile.folderConfig);
+    };*/
 
     /*var progressbar = $('#progressbar'),
             max = progressbar.attr('max'),
@@ -62,6 +67,7 @@ angular.module('splash', ['ionic'])
                 element.val(value);
                 if (value == max) {
                     $interval.cancel(timeoutId);
+                    location.href = "login.html";
                 }
             }
 

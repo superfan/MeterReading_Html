@@ -28,6 +28,10 @@ public class CordovaApp extends CordovaActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+        //SetupHelper setupHelper = new SetupHelper(this);
+        //setupHelper.initDefaultDirectoriesAndFiles();
+
         super.init();
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);

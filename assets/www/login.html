@@ -20,28 +20,30 @@
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
-    <!--script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script-->
     <script src="js/login.js"></script>
 </head>
 
 <body class="login">
-    <div ng-controller="LoginCtrl" class="div-frame">
+    <div class="div-frame">
         <div class="div-logo">
             <img src="img/ic_logo.png" class="logo"/>
         </div>
 
-        <div class="div-info">
-            <form>
-                Name: <input type="text" ng-model="user.name" /><br />
-                Password: <input type="text" ng-model="user.password" /><br />
-                <!--input type="submit" ng-click="update(user)" value="Login" id="entering"/-->
-            </form>
+        <div class="div-info" ng-controller="LoginCtrl">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="text" placeholder="Name" ng-model="user.name">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Password" ng-model="user.password">
+                </label>
+            </div>
 
-            <button class="button button-calm btn-login" ng-click="onLogin()">
-                Login
-            </button>
+            <div class="div-btn">
+                <button class="button button-block button-positive" ng-click="onLogin()">
+                    Login
+                </button>
+            </div>
         </div>
     </div>
 

@@ -184,7 +184,7 @@ public class LocalFilesystem extends Filesystem {
                 throw new FileExistsException("create/exclusive fails");
             }
             if (directory) {
-                fp.mkdir();
+                fp.mkdirs(); // fp.mkdir();
             } else {
                 fp.createNewFile();
             }
