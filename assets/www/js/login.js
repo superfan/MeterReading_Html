@@ -10,7 +10,7 @@ angular.module('login', ['ionic'])
     $scope.onLogin = function() {
         if (isOpened) {
             var sql = "select * from user where Account = "
-                        +  $scope.user.name + " and PassWord = " + $scope.user.password
+                        +  $scope.user.name + " and PassWord = " + $scope.user.password;
             window.cordovaSQLite.execQuerySingleResult(sql,
                                 [],
                                 function(result) {
@@ -56,7 +56,7 @@ angular.module('login', ['ionic'])
     };
 
     function onDeviceReady() {
-        window.cordovaSQLite.openDatabase("file:///mnt/sdcard/sh3h/meterreading/data/main.db", 0,
+        window.cordovaSQLite.openDatabase("file:///mnt/sdcard/sh3h/meterreading/data/main.cbj", 0,
             function() {
                 isOpened = true;
             },

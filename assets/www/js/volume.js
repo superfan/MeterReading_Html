@@ -1,30 +1,12 @@
-angular.module('tasks', ['ionic'])
-.controller('TasksCtrl', function($scope, $interval) {
-    $scope.items = [
-    ];
+angular.module('volume', ['ionic'])
+.controller('VolumeCtrl', function($scope, $interval) {
+    $scope.items = [];
+    //  for (var i = 0; i < 1000; i++) {
+    //    $scope.items.push('Item ' + i);
+    //  }
 
     $scope.onBack = function() {
-        location.href = "main.html";
-        /*$scope.items[0] = {
-            volume : 'a1',
-            year_month : 'a2',
-            period :  'a3',
-            count : '0/120'
-        };
-
-        $scope.items[1] = {
-            volume : 'b1',
-            year_month : 'b2',
-            period :  'b3',
-            count : '0/130'
-        };
-
-        $scope.items[2] = {
-            volume : 'c1',
-            year_month : 'c2',
-            period :  'c3',
-            count : '0/140'
-        };*/
+        location.href = "tasks.html";
     }
 
     var timeoutId;
@@ -39,10 +21,14 @@ angular.module('tasks', ['ionic'])
         data = new Array();
         for (var i = 0; i < results.length; ++i) {
             data[i] = {
-                volume : results[i][0],
-                year_month : results[i][1],
-                period :  results[i][2],
-                count : results[i][3] + "/" + results[i][4]
+                xuhao : results[i][0],
+                cid : results[i][1],
+                name :  results[i][2],
+                address : results[i][3],
+                shangcicm : results[i][4],
+                bencicm : results[i][5],
+                chaojiansl : results[i][6],
+                chaobiaozt : results[i][7]
             };
         }
 
@@ -58,7 +44,11 @@ angular.module('tasks', ['ionic'])
     }
 
     function onDBSuccess() {
-        var sql = "select S_CH, I_ZhangWuNY, S_CHAOBIAOZQ, I_YiChaoShu, I_ZongShu from CB_ChaoBiaoRW where S_ChaoBiaoYBH = '2310004'";
+        var sql = "select sj.I_CENEIXH, sj.S_CID, bk.S_KeHuMC, bk.S_DiZhi, sj.I_SHANGCICM, sj.I_BENCICM, sj.I_CHAOJIANSL, sj.S_ZHUANGTAIMC \
+                   from CB_CHAOBIAOSJ sj, KG_BIAOKAXX bk \
+                   where sj.S_CH = '2316818' \
+                   and sj.S_CID = bk.S_CID \
+                   order by sj.I_CENEIXH";
         window.cordovaSQLite.execQueryArrayResult(sql,
             [],
             onTaskSuccess,
@@ -77,5 +67,4 @@ angular.module('tasks', ['ionic'])
     }
 
     document.addEventListener("deviceready", onDeviceReady, false);
-
 });

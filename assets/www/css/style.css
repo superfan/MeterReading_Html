@@ -87,7 +87,7 @@
     height: auto;
 }
 
-.tasks .card .title {
+/*.tasks .card .title {
     background: #4a87ee;
 }
 
@@ -99,23 +99,34 @@
     color: red;
     position: absolute;
     right: 1%;
+}*/
+
+.tasks .year-month2 {
+    margin-left: 5px;
 }
 
-.tasks .card .content .year-month {
-    position: relative;
-    left: 1%;
-}
-
-.tasks .card .content .button-operation {
+/*.tasks .card .content .button-operation {
     position:absolute;
     top: 20%;
     right: 10px;
+}*/
+
+.tasks .period1 {
+    margin-left: 10px;
 }
 
-.tasks .card .content .period {
-    position: relative;
-    left: 1%;
+.tasks .period2 {
+    margin-left: 5px;
 }
+
+//.tasks .count1 {
+//    margin-left: 10px;
+//}
+
+.tasks .count2 {
+    margin-left: 5px;
+}
+
 
 /*
 @media (max-width: 960px) {

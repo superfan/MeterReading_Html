@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/volume.js"></script>
+</head>
+
+<body class="volume" ng-app="volume" ng-controller="VolumeCtrl">
+
+<ion-header-bar class="bar-dark">
+    <button class="button button-icon icon ion-arrow-left-c" ng-click="onBack()"></button>
+    <h1 class="title">册本列表</h1>
+</ion-header-bar>
+
+<ion-header-bar class="bar-light bar-subheader">
+    <input type="search"
+           placeholder="Filter contacts..."
+           ng-model="search"
+           ng-focus="searchFocused = true"
+           ng-blur="searchFocused = false"
+           ng-change="scrollTop()">
+    <button ng-if="search.length"
+            class="button button-icon ion-android-close input-button"
+            ng-click="clearSearch()">
+    </button>
+</ion-header-bar>
+
+<ion-content>
+    <ion-list>
+        <ion-item ng-repeat="item in items" class="item-thumbnail-left"
+                  href="#">
+            <img src="./img/ic_volume.png">
+
+            <h2>{{item.xuhao}}/{{item.cid}}</h2>
+
+            <p>
+                <span class="name1">户名</span><span class="name2">{{item.name}}</span>
+            </p>
+
+            <p>
+                <span class="address1">地址</span><span class="address2">{{item.address}}</span>
+            </p>
+
+            <p>
+                <span class="shangcicm1">上次抄码</span><span class="shangcicm2">{{item.shangcicm}}</span>
+                <span class="bencicm1">本次抄码</span><span class="bencicm2">{{item.bencicm}}</span>
+            </p>
+
+            <p>
+                <span class="chaojiansl1">抄见水量</span><span class="chaojiansl2">{{item.chaojiansl}}</span>
+                <span class="chaobiaozt1">抄表状态</span><span class="chaobiaozt2">{{item.chaobiaozt}}</span>
+            </p>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+</body>
+</html>

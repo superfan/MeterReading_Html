@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="login">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport"
@@ -23,7 +23,7 @@
     <script src="js/login.js"></script>
 </head>
 
-<body class="login">
+<body ng-app="login" class="login">
     <div class="div-frame">
         <div class="div-logo">
             <img src="img/ic_logo.png" class="logo"/>
@@ -32,16 +32,16 @@
         <div class="div-info" ng-controller="LoginCtrl">
             <div class="list list-inset">
                 <label class="item item-input">
-                    <input type="text" placeholder="Name" ng-model="user.name">
+                    <input type="text" placeholder="用户名" ng-model="user.name">
                 </label>
                 <label class="item item-input">
-                    <input type="password" placeholder="Password" ng-model="user.password">
+                    <input type="password" placeholder="密码" ng-model="user.password">
                 </label>
             </div>
 
             <div class="div-btn">
                 <button class="button button-block button-positive" ng-click="onLogin()">
-                    Login
+                    登录
                 </button>
             </div>
         </div>

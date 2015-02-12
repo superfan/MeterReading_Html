@@ -21,57 +21,35 @@
 
     <!-- your app's js -->
     <script src="js/tasks.js"></script>
-    <!--script src="js/controllers.js"></script>
-    <script src="js/services.js"></script-->
 </head>
 
-<body ng-app="tasks" class="tasks">
+<body class="tasks" ng-app="tasks" ng-controller="TasksCtrl">
 
-<div ng-controller="TasksCtrl">
-    <ion-header-bar class="bar-positive">
-        <button class="button button-icon icon ion-arrow-left-c"></button>
-        <h1 class="title">Task List</h1>
-    </ion-header-bar>
-    <ion-content>
-        <div class="list" ng-repeat="item in items">
-            <div class="list card">
-                <div class="item title">
-                    <span class="volume">{{info.volume}}</span>
-                    <span class="count">{{info.count}}</span>
-                </div>
+<ion-header-bar class="bar-dark">
+    <button class="button button-icon icon ion-arrow-left-c" ng-click="onBack()"></button>
+    <h1 class="title">抄表任务</h1>
+</ion-header-bar>
 
-                <a href="#" class="item content">
-                    <p><span>账务年月</span><span class="year-month">{{info.year_month}}</span></p>
-                    <p><span>抄表周期</span><span class="period">{{info.period}}</span></p>
+<ion-content>
+    <ion-list>
+        <ion-item ng-repeat="item in items" class="item-avatar"
+                  href="volume.html?vol={{item.volume}}">
+            <img src="./img/ic_task.png">
 
-                    <button class="button button-balanced button-operation">
-                        开始抄表
-                    </button>
-                </a>
-            </div>
-        </div>
+            <h2>{{item.volume}}({{item.count}})</h2>
 
-        <!--div class="list">
-            <label class="item item-input item-stacked-label">
-                <span class="input-label">Loading Duration (ms)</span>
-                <input type="number" ng-model="loadingOptions.duration">
-            </label>
-            <label class="item item-input item-stacked-label">
-                <span class="input-label">Loading Delay (ms)</span>
-                <input type="number" ng-model="loadingOptions.delay">
-            </label>
-            <label class="item item-input item-stacked-label">
-                <span class="input-label">Loading Template</span>
-                <textarea rows="3" ng-model="loadingOptions.template"></textarea>
-            </label>
-            <ion-toggle class="item item-toggle"
-                        ng-model="loadingOptions.noBackdrop">
-                Hide Backdrop?
-            </ion-toggle>
-        </div-->
-    </ion-content>
-</div>
+            <p>
+                <span class="year-month1">账务年月</span><span class="year-month2">{{item.year_month}}</span>
+                <span class="period1">抄表周期</span><span class="period2">{{item.period}}</span>
+            </p>
 
+            <ion-option-button class="button-positive"
+                               ng-click="share(item)">
+                继续抄表
+            </ion-option-button>
+        </ion-item>
+    </ion-list>
+</ion-content>
 
 </body>
 </html>
