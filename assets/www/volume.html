@@ -20,6 +20,7 @@
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
+    <script src="js/global.js"></script>
     <script src="js/volume.js"></script>
 </head>
 
@@ -45,7 +46,9 @@
 
 <ion-content>
     <ion-list>
-        <ion-item ng-repeat="item in items" class="item-thumbnail-left"
+        <ion-item ng-repeat="item in items"
+                  class="item-thumbnail-left"
+                  item="item"
                   href="#">
             <img src="./img/ic_volume.png">
 

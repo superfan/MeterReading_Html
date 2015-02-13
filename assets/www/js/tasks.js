@@ -1,10 +1,12 @@
 angular.module('tasks', ['ionic'])
 .controller('TasksCtrl', function($scope, $interval) {
+    $scope.account = myGlobal.getQueryStringRegExp("account");
+
     $scope.items = [
     ];
 
     $scope.onBack = function() {
-        location.href = "main.html";
+        window.history.back();
         /*$scope.items[0] = {
             volume : 'a1',
             year_month : 'a2',
@@ -58,7 +60,8 @@ angular.module('tasks', ['ionic'])
     }
 
     function onDBSuccess() {
-        var sql = "select S_CH, I_ZhangWuNY, S_CHAOBIAOZQ, I_YiChaoShu, I_ZongShu from CB_ChaoBiaoRW where S_ChaoBiaoYBH = '2310004'";
+        var sql = "select S_CH, I_ZhangWuNY, S_CHAOBIAOZQ, I_YiChaoShu, I_ZongShu from CB_ChaoBiaoRW \
+            where S_ChaoBiaoYBH = " + $scope.account;
         window.cordovaSQLite.execQueryArrayResult(sql,
             [],
             onTaskSuccess,

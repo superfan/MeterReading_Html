@@ -20,6 +20,7 @@
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
+    <script src="js/global.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -34,7 +35,7 @@
     <ion-content>
         <div class="list">
 
-            <a class="item item-icon-left item-icon-right" href="tasks.html">
+            <a class="item item-icon-left item-icon-right" href="tasks.html?account={{account}}">
                 <i class="icon ion-briefcase"></i>
                 我的任务
                 <span class="badge badge-assertive">0</span>

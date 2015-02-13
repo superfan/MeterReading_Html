@@ -1,12 +1,15 @@
 angular.module('volume', ['ionic'])
 .controller('VolumeCtrl', function($scope, $interval) {
+    $scope.account = myGlobal.getQueryStringRegExp("account");
+    $scope.volume = myGlobal.getQueryStringRegExp("volume");
+
     $scope.items = [];
     //  for (var i = 0; i < 1000; i++) {
     //    $scope.items.push('Item ' + i);
     //  }
 
     $scope.onBack = function() {
-        location.href = "tasks.html";
+        window.history.back();
     }
 
     var timeoutId;
@@ -46,7 +49,7 @@ angular.module('volume', ['ionic'])
     function onDBSuccess() {
         var sql = "select sj.I_CENEIXH, sj.S_CID, bk.S_KeHuMC, bk.S_DiZhi, sj.I_SHANGCICM, sj.I_BENCICM, sj.I_CHAOJIANSL, sj.S_ZHUANGTAIMC \
                    from CB_CHAOBIAOSJ sj, KG_BIAOKAXX bk \
-                   where sj.S_CH = '2316818' \
+                   where sj.S_CH = '" + $scope.volume + "' \
                    and sj.S_CID = bk.S_CID \
                    order by sj.I_CENEIXH";
         window.cordovaSQLite.execQueryArrayResult(sql,

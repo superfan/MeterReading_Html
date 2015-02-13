@@ -15,7 +15,7 @@ angular.module('login', ['ionic'])
                                 [],
                                 function(result) {
                                     //alert("555555555");
-                                    location.href = "main.html";
+                                    location.href = "main.html?account=" + $scope.user.name;
                                 },
                                 function() {
                                     alert("name or password is not correct!!!");

@@ -78,7 +78,7 @@ angular.module('splash', ['ionic'])
             // start the UI update process; save the timeoutId for canceling
             timeoutId = $interval(function() {
               update(); // update DOM
-            }, 1000);
+            }, 100);
         }, false);
     }
 

@@ -20,6 +20,7 @@
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
+    <script src="js/global.js"></script>
     <script src="js/tasks.js"></script>
 </head>
 
@@ -33,7 +34,7 @@
 <ion-content>
     <ion-list>
         <ion-item ng-repeat="item in items" class="item-avatar"
-                  href="volume.html?vol={{item.volume}}">
+                  href="volume.html?account={{account}}&volume={{item.volume}}">
             <img src="./img/ic_task.png">
 
             <h2>{{item.volume}}({{item.count}})</h2>

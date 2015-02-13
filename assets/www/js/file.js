@@ -1,4 +1,4 @@
-var myfile = (function() {
+var myFile = (function() {
     var data = null; //data need write
     var directory = null;
     var fileName = null; //default file name

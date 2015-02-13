@@ -3,4 +3,7 @@ angular.module('main', ['ionic'])
     $scope.onQuit = function() {
         alert("quit");
     }
+
+    $scope.account = myGlobal.getQueryStringRegExp("account");
+
 });
