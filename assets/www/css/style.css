@@ -127,6 +127,32 @@
     margin-left: 5px;
 }
 
+.volume .name2 {
+    margin-left: 5px;
+}
+
+.volume .address2 {
+    margin-left: 5px;
+}
+
+.volume .shangcicm2, .volume .bencicm2 {
+    margin-left: 5px;
+}
+
+.volume .bencicm1 {
+    position: absolute;
+    left: 300px;
+}
+
+.volume .bencicm2 {
+    position: absolute;
+    left: 300px;
+}
+
+.volume .chaojiansl2, .volume .chaobiaozt2 {
+    margin-left: 5px;
+}
+
 
 /*
 @media (max-width: 960px) {

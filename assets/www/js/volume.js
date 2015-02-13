@@ -9,7 +9,19 @@ angular.module('volume', ['ionic'])
     //  }
 
     $scope.onBack = function() {
-        window.history.back();
+        //window.history.back();
+        for (var i = 0; i < 20; ++i) {
+                    $scope.items[i] = {
+                        xuhao : 1111,
+                        cid : 222,
+                        name :  333,
+                        address : 444,
+                        shangcicm : 5555,
+                        bencicm : 666,
+                        chaojiansl : 777,
+                        chaobiaozt : 888
+                    };
+                }
     }
 
     var timeoutId;

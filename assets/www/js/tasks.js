@@ -7,6 +7,14 @@ angular.module('tasks', ['ionic'])
 
     $scope.onBack = function() {
         window.history.back();
+        /*for (var i = 0; i < 100; ++i) {
+            $scope.items[i] = {
+                        volume : 'a1',
+                        year_month : 'a2',
+                        period :  'a3',
+                        count : '0/120'
+                    };
+        }*/
         /*$scope.items[0] = {
             volume : 'a1',
             year_month : 'a2',
