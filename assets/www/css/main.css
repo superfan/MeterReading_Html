@@ -1,0 +1,59 @@
+.main-content {
+    //margin-top: 15px;
+}
+
+.main-row {
+    //border: 1px solid red;
+    text-align: center;
+    //margin-left: 10px;
+    //margin-right: 10px;
+}
+
+/*
+.row {
+    margin-left: 10px;
+    margin-right: -10px;
+}*/
+
+.main-row .col-4 {
+    //border: 1px solid blue;
+    width: 33.33333%;
+}
+
+.main-row > div {
+    //border: 1px solid blue;
+    margin-top: 15px;
+}
+
+.main-row a {
+    //border: 1px solid green;
+    opacity: 0.8;
+    transition: 0.1s ease-in-out;
+    transition-property: opacity, border-color;
+    color: black;
+    text-decoration: none;
+}
+
+.main-row a:active img {
+    //background:url(./img/ic_home_hotline.png) 0 0 no-repeat;
+    //border: 1px solid red;
+    //color:#0000FF;
+    //border: 1px solid #0000ff;
+    background: #C0C0C0;
+}
+
+.main-row h5 {
+    color: #333;
+    font-family: "AvenirNextLTPro-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 8px;
+}
+
+.main-row p {
+    color: #888;
+    font-size: 13px;
+    font-family: "AvenirNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+

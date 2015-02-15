@@ -9,8 +9,8 @@ angular.module('volume', ['ionic'])
     //  }
 
     $scope.onBack = function() {
-        //window.history.back();
-        for (var i = 0; i < 20; ++i) {
+        window.history.back();
+        /*for (var i = 0; i < 20; ++i) {
                     $scope.items[i] = {
                         xuhao : 1111,
                         cid : 222,
@@ -21,7 +21,7 @@ angular.module('volume', ['ionic'])
                         chaojiansl : 777,
                         chaobiaozt : 888
                     };
-                }
+                }*/
     }
 
     var timeoutId;
