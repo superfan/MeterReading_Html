@@ -24,7 +24,7 @@
         Ionic Framework Team
     </author>
     <!--content src="index.html" /-->
-    <content src="file:///mnt/sdcard/sh3h/meterreading/www/splash.html" />
+    <content src="file:///mnt/sdcard/sh3h_html/meterreading/www/splash.html" />
     <access origin="*" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />

@@ -16,7 +16,7 @@ public class SetupHelper {
     /**
      * 根目录
      */
-    public static final String FOLDER_ROOT = "sh3h/meterreading";
+    public static final String FOLDER_ROOT = "sh3h_html/meterreading";
     /**
      * www文件目录
      */

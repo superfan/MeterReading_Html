@@ -9,13 +9,17 @@ angular.module('login', ['ionic'])
 
     $scope.onLogin = function() {
         if (isOpened) {
-            var sql = "select * from user where Account = "
-                        +  $scope.user.name + " and PassWord = " + $scope.user.password;
+            var sql = "select * from user where Account = '"
+                        +  $scope.user.name + "' and PassWord = '" + $scope.user.password + "'";
             window.cordovaSQLite.execQuerySingleResult(sql,
                                 [],
                                 function(result) {
-                                    //alert("555555555");
-                                    location.href = "main.html?account=" + $scope.user.name;
+                                    if (result != null) {
+                                        location.href = "main.html?account=" + $scope.user.name;
+                                    }
+                                    else {
+                                        alert("name or password is not correct!!!");
+                                    }
                                 },
                                 function() {
                                     alert("name or password is not correct!!!");
@@ -56,7 +60,7 @@ angular.module('login', ['ionic'])
     };
 
     function onDeviceReady() {
-        window.cordovaSQLite.openDatabase("file:///mnt/sdcard/sh3h/meterreading/data/main.cbj", 0,
+        window.cordovaSQLite.openDatabase(myGlobal.db, 0,
             function() {
                 isOpened = true;
             },

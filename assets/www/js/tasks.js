@@ -81,7 +81,7 @@ angular.module('tasks', ['ionic'])
     }
 
     function onDeviceReady() {
-        window.cordovaSQLite.openDatabase("file:///mnt/sdcard/sh3h/meterreading/data/main.cbj",
+        window.cordovaSQLite.openDatabase(myGlobal.db,
             0,
             onDBSuccess,
             onDBFailure);
