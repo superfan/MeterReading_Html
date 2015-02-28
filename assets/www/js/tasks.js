@@ -15,26 +15,6 @@ angular.module('tasks', ['ionic'])
                         count : '0/120'
                     };
         }*/
-        /*$scope.items[0] = {
-            volume : 'a1',
-            year_month : 'a2',
-            period :  'a3',
-            count : '0/120'
-        };
-
-        $scope.items[1] = {
-            volume : 'b1',
-            year_month : 'b2',
-            period :  'b3',
-            count : '0/130'
-        };
-
-        $scope.items[2] = {
-            volume : 'c1',
-            year_month : 'c2',
-            period :  'c3',
-            count : '0/140'
-        };*/
     }
 
     var timeoutId;
@@ -89,4 +69,6 @@ angular.module('tasks', ['ionic'])
 
     document.addEventListener("deviceready", onDeviceReady, false);
 
+    //document.addEventListener("backbutton", function(){
+    //}, false);
 });

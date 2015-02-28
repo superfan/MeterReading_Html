@@ -34,13 +34,14 @@
     text-decoration: none;
 }
 
-.main-row a:active img {
+//.main-row a:active img {
     //background:url(./img/ic_home_hotline.png) 0 0 no-repeat;
     //border: 1px solid red;
     //color:#0000FF;
     //border: 1px solid #0000ff;
-    background: #C0C0C0;
-}
+    //background: #C0C0C0;
+//    background: #ff0000;
+//}
 
 .main-row h5 {
     color: #333;

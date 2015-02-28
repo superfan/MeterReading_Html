@@ -16,37 +16,23 @@
        specific language governing permissions and limitations
        under the License.
 */
-buildscript {
-    repositories {
-        mavenCentral()
-    }
+package org.apache.cordova;
 
-    dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
-    }
-}
-apply plugin: 'android-library'
-android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
-    }
-
-    sourceSets {
-        main {
-            manifest.srcFile 'AndroidManifest.xml'
-            java.srcDirs = ['src']
-            resources.srcDirs = ['src']
-            aidl.srcDirs = ['src']
-            renderscript.srcDirs = ['src']
-            res.srcDirs = ['res']
-            assets.srcDirs = ['assets']
-        }
-    }
-}
-
-dependencies {
+/**
+ * Specifies interface for HTTP auth handler object which is used to handle auth requests and
+ * specifying user credentials.
+ */
+ public interface ICordovaHttpAuthHandler {
+    /**
+     * Instructs the WebView to cancel the authentication request.
+     */
+    public void cancel ();
+    
+    /**
+     * Instructs the WebView to proceed with the authentication with the given credentials.
+     * 
+     * @param username The user name
+     * @param password The password
+     */
+    public void proceed (String username, String password);
 }
